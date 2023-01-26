@@ -1,0 +1,266 @@
+[2023-01-25 09:18:14] local.ERROR: Database (/home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/database.sqlite) does not exist. (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database (/home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/database.sqlite) does not exist. (SQL: PRAGMA foreign_keys = ON;) at /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(546): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(398): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/vincent/D...', '', Array)
+#5 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/vincent/D...', '', Array)
+#6 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(145): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(100): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1805): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1771): Illuminate\\Database\\Eloquent\\Model::resolveConnection(NULL)
+#11 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1563): Illuminate\\Database\\Eloquent\\Model->getConnection()
+#12 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1482): Illuminate\\Database\\Eloquent\\Model->newBaseQueryBuilder()
+#13 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1518): Illuminate\\Database\\Eloquent\\Model->newModelQuery()
+#14 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(327): Illuminate\\Database\\Eloquent\\Model->newQueryWithoutScopes()
+#15 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(236): Illuminate\\Database\\Eloquent\\Factories\\Factory->Illuminate\\Database\\Eloquent\\Factories\\{closure}(Object(App\\Models\\Client), 0)
+#16 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(339): Illuminate\\Support\\Collection->each(Object(Closure))
+#17 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(283): Illuminate\\Database\\Eloquent\\Factories\\Factory->store(Object(Illuminate\\Database\\Eloquent\\Collection))
+#18 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/seeders/ClientsSeeder.php(16): Illuminate\\Database\\Eloquent\\Factories\\Factory->create()
+#19 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\ClientsSeeder->run()
+#20 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call(Array, Array)
+#25 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#26 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(61): Illuminate\\Database\\Seeder->__invoke(Array)
+#27 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/seeders/DatabaseSeeder.php(15): Illuminate\\Database\\Seeder->call('Database\\\\Seeder...')
+#28 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#29 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#30 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#31 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#32 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#33 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call(Array, Array)
+#34 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#35 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(81): Illuminate\\Database\\Seeder->__invoke()
+#36 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#37 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(82): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#38 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#39 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#40 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#41 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#42 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#43 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\\Container\\Container->call(Array)
+#44 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Command/Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#45 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#46 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(1022): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#47 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(314): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#48 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#49 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#50 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#51 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#52 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database (/home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/database.sqlite) does not exist. at /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:34)
+[stacktrace]
+#0 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(221): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#1 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#2 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1181): call_user_func(Object(Closure))
+#3 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(539): Illuminate\\Database\\Connection->getPdo()
+#4 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(753): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('PRAGMA foreign_...', Array)
+#5 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#6 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(546): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#7 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(398): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#8 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#9 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/vincent/D...', '', Array)
+#10 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/vincent/D...', '', Array)
+#11 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#12 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(145): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#13 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(100): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#14 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1805): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#15 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1771): Illuminate\\Database\\Eloquent\\Model::resolveConnection(NULL)
+#16 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1563): Illuminate\\Database\\Eloquent\\Model->getConnection()
+#17 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1482): Illuminate\\Database\\Eloquent\\Model->newBaseQueryBuilder()
+#18 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1518): Illuminate\\Database\\Eloquent\\Model->newModelQuery()
+#19 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(327): Illuminate\\Database\\Eloquent\\Model->newQueryWithoutScopes()
+#20 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(236): Illuminate\\Database\\Eloquent\\Factories\\Factory->Illuminate\\Database\\Eloquent\\Factories\\{closure}(Object(App\\Models\\Client), 0)
+#21 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(339): Illuminate\\Support\\Collection->each(Object(Closure))
+#22 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Factories/Factory.php(283): Illuminate\\Database\\Eloquent\\Factories\\Factory->store(Object(Illuminate\\Database\\Eloquent\\Collection))
+#23 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/seeders/ClientsSeeder.php(16): Illuminate\\Database\\Eloquent\\Factories\\Factory->create()
+#24 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\ClientsSeeder->run()
+#25 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#27 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#28 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#29 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call(Array, Array)
+#30 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#31 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(61): Illuminate\\Database\\Seeder->__invoke(Array)
+#32 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/seeders/DatabaseSeeder.php(15): Illuminate\\Database\\Seeder->call('Database\\\\Seeder...')
+#33 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
+#34 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#35 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#36 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#37 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#38 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(184): Illuminate\\Container\\Container->call(Array, Array)
+#39 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
+#40 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(81): Illuminate\\Database\\Seeder->__invoke()
+#41 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#42 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(82): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#43 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#44 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#45 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#46 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#47 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#48 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\\Container\\Container->call(Array)
+#49 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Command/Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#50 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#51 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(1022): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#52 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(314): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#53 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#54 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#55 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#56 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#57 {main}
+"} 
+[2023-01-25 09:18:24] local.ERROR: Command "db:fresh" is not defined.
+
+Did you mean one of these?
+    db
+    db:monitor
+    db:seed
+    db:show
+    db:table
+    db:wipe
+    migrate:fresh
+    migrate:refresh {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"db:fresh\" is not defined.
+
+Did you mean one of these?
+    db
+    db:monitor
+    db:seed
+    db:show
+    db:table
+    db:wipe
+    migrate:fresh
+    migrate:refresh at /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php:702)
+[stacktrace]
+#0 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(256): Symfony\\Component\\Console\\Application->find('db:fresh')
+#1 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2023-01-25 09:18:31] local.ERROR: Database (/home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/database.sqlite) does not exist. (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database (/home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/database.sqlite) does not exist. (SQL: PRAGMA foreign_keys = ON;) at /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php:760)
+[stacktrace]
+#0 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(546): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(398): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/vincent/D...', '', Array)
+#5 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/vincent/D...', '', Array)
+#6 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(145): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(100): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/WipeCommand.php(80): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/WipeCommand.php(59): Illuminate\\Database\\Console\\WipeCommand->dropAllTables(NULL)
+#11 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\WipeCommand->handle()
+#12 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\\Container\\Container->call(Array)
+#17 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Command/Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#18 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#19 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\NullOutput))
+#20 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(40): Illuminate\\Console\\Command->runCommand('db:wipe', Array, Object(Symfony\\Component\\Console\\Output\\NullOutput))
+#21 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(45): Illuminate\\Console\\Command->callSilent('db:wipe', Array)
+#22 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#23 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/View/Components/Factory.php(56): Illuminate\\Console\\View\\Components\\Task->render('Dropping all ta...', Object(Closure))
+#24 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(49): Illuminate\\Console\\View\\Components\\Factory->__call('task', Array)
+#25 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#26 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#27 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#28 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#29 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#30 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\\Container\\Container->call(Array)
+#31 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Command/Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#32 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#33 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(1022): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(314): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database (/home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/database/database.sqlite) does not exist. at /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:34)
+[stacktrace]
+#0 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(221): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#1 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#2 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1181): call_user_func(Object(Closure))
+#3 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(539): Illuminate\\Database\\Connection->getPdo()
+#4 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(753): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('PRAGMA foreign_...', Array)
+#5 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(720): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#6 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connection.php(546): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#7 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(398): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#8 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(35): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#9 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(272): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/vincent/D...', '', Array)
+#10 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/vincent/D...', '', Array)
+#11 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#12 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(145): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#13 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(100): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#14 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/WipeCommand.php(80): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#15 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/WipeCommand.php(59): Illuminate\\Database\\Console\\WipeCommand->dropAllTables(NULL)
+#16 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\WipeCommand->handle()
+#17 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#18 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#19 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\\Container\\Container->call(Array)
+#22 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Command/Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(68): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Symfony\\Component\\Console\\Output\\NullOutput))
+#25 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(40): Illuminate\\Console\\Command->runCommand('db:wipe', Array, Object(Symfony\\Component\\Console\\Output\\NullOutput))
+#26 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(45): Illuminate\\Console\\Command->callSilent('db:wipe', Array)
+#27 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#28 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/View/Components/Factory.php(56): Illuminate\\Console\\View\\Components\\Task->render('Dropping all ta...', Object(Closure))
+#29 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(49): Illuminate\\Console\\View\\Components\\Factory->__call('task', Array)
+#30 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#31 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#32 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#33 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#34 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Container/Container.php(663): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#35 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\\Container\\Container->call(Array)
+#36 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Command/Command.php(312): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#37 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Command.php(152): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#38 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(1022): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(314): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#42 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 {main}
+"} 
+[2023-01-25 09:18:59] local.ERROR: Command "db:fresh" is not defined.
+
+Did you mean one of these?
+    db
+    db:monitor
+    db:seed
+    db:show
+    db:table
+    db:wipe
+    migrate:fresh
+    migrate:refresh {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"db:fresh\" is not defined.
+
+Did you mean one of these?
+    db
+    db:monitor
+    db:seed
+    db:show
+    db:table
+    db:wipe
+    migrate:fresh
+    migrate:refresh at /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php:702)
+[stacktrace]
+#0 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(256): Symfony\\Component\\Console\\Application->find('db:fresh')
+#1 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/symfony/console/Application.php(168): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(155): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/vincent/Documents/R4A.01_CompWeb/Workspace_CompWeb/activite-sport/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
